@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..12} pypy3 )
+PYTHON_COMPAT=( python3_{10..13} pypy3 )
 DISTUTILS_USE_PEP517=poetry
 
 inherit distutils-r1
@@ -22,6 +22,7 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 
 RDEPEND="
+	${PYTHON_DEPS}
 	>=dev-python/colorful-0.5.4[${PYTHON_USEDEP}]
 	>=dev-python/tomlkit-0.5.11[${PYTHON_USEDEP}]
 	>=dev-python/packaging-20.3[${PYTHON_USEDEP}]
